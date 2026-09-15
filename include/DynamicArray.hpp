@@ -1,5 +1,5 @@
 #pragma once
-#include "UniquePtr.h"
+#include "UniquePtr.hpp"
 #include "Exceptions.hpp"
 #include <cstddef>
 #include <initializer_list>
