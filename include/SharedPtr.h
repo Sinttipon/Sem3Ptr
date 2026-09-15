@@ -26,6 +26,8 @@ private:
     }
 
 public:
+    SharedPtr(T *p = nullptr)
+        : ptr_(p), refCount_(p ? new size_t(1) : nullptr) {}
     SharedPtr(std::nullptr_t) noexcept : ptr_(nullptr), refCount_(nullptr) {}
 
     SharedPtr(const SharedPtr &other) noexcept
@@ -155,6 +157,8 @@ private:
     }
 
 public:
+    SharedPtr(T *p = nullptr)
+        : ptr_(p), refCount_(p ? new size_t(1) : nullptr) {}
     SharedPtr(std::nullptr_t) noexcept : ptr_(nullptr), refCount_(nullptr) {}
 
     SharedPtr(const SharedPtr &other) noexcept

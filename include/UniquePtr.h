@@ -12,6 +12,8 @@ private:
     T *ptr_;
 
 public:
+    UniquePtr(T *p = nullptr) noexcept : ptr_(p) {}
+
     ~UniquePtr() { delete ptr_; }
 
     UniquePtr(const UniquePtr &) = delete;
@@ -88,6 +90,7 @@ private:
     T *ptr_;
 
 public:
+    UniquePtr(T *p = nullptr) noexcept : ptr_(p) {}
     ~UniquePtr() { delete[] ptr_; }
 
     UniquePtr(const UniquePtr &) = delete;
