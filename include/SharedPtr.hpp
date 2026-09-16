@@ -1,5 +1,5 @@
 #pragma once
-#include "UniquePtr.h"
+#include "UniquePtr.hpp"
 #include <cstddef>
 #include <type_traits>
 #include <utility>
